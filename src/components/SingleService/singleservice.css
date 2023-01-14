@@ -1,0 +1,31 @@
+.service {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111111;
+  padding: 1rem;
+  gap: 2rem;
+  transition: var(--transition);
+  border-radius: 10px;
+}
+.service:hover {
+  background-color: var(--orange);
+}
+.service:hover .service-icon {
+  background-color: white;
+  color: black;
+}
+.service-icon {
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem;
+}
+
+.service-content {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+}

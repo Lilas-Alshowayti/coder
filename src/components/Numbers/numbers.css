@@ -1,0 +1,56 @@
+.numbers {
+  background-image: url("../../assets/rectangle.png");
+  margin-top: 50px;
+  height: 50vh;
+}
+.squares {
+  width: 80vw;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  color: white;
+}
+.square {
+  width: 20vw;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #707070;
+  border: 1px solid white;
+  border-radius: 10px;
+  transition: var(--transition);
+}
+.square:hover {
+  background-color: var(--orange);
+  border: 1px solid transparent;
+}
+.square .num {
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+}
+.square .text {
+  font-size: 1.5rem;
+  margin-top: 0;
+  text-align: center;
+}
+@media screen and (max-width: 1024px) {
+  .squares {
+    grid-template-columns: repeat(2, auto);
+  }
+  .square {
+    width: 40vw;
+  }
+}
+@media screen and (max-width: 700px) {
+  .squares {
+    grid-template-columns: repeat(1, auto);
+  }
+  .square {
+    width: 60vw;
+  }
+}

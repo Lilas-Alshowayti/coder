@@ -1,0 +1,138 @@
+.contact {
+  margin-top: 5rem;
+}
+.contact .container {
+  background-color: #060606;
+  display: flex;
+  gap: 1rem;
+
+  color: white;
+}
+.contact-us {
+  flex: 1;
+}
+
+.form {
+  flex: 1;
+  position: relative;
+}
+.contact .contact-title {
+  font-size: 2ren;
+  margin-bottom: 2rem;
+
+  font-weight: bold;
+}
+.info {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.info .dets {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.info .dets .icon {
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  border-radius: 50%;
+  border: 1px solid #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.socials {
+  position: absolute;
+  width: 30vw;
+  left: -10%;
+  height: 4rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+  background-color: var(--orange);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-inline-end: 2rem;
+  gap: 1rem;
+}
+
+form {
+  display: grid;
+  grid-template-areas:
+    "name email"
+    "tel num"
+    "msg msg"
+    "btn btn";
+  gap: 1.5rem;
+}
+input {
+  height: 60px;
+  background-color: black;
+  border: 1px solid #333333;
+  outline: none;
+  padding: 1rem;
+  color: white;
+}
+input[type="text"] {
+  grid-area: name;
+}
+input[type="email"] {
+  grid-area: email;
+}
+input[type="tel"] {
+  grid-area: tel;
+}
+input[type="number"] {
+  grid-area: num;
+}
+input[type="submit"] {
+  grid-area: btn;
+  margin-top: 1rem;
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  width: 10rem;
+  margin: 2rem 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+}
+textarea {
+  grid-area: msg;
+  resize: none;
+  background-color: black;
+  border: 1px solid #333333;
+  color: white;
+  outline: none;
+  padding: 1rem;
+  height: 150px;
+}
+@media screen and (max-width: 1024px) {
+  .contact .container {
+    flex-direction: column;
+  }
+  .socials {
+    display: none;
+  }
+  .find {
+    display: none;
+  }
+}
+.info-details {
+  color: #666;
+}
+@media screen and (max-width: 450px) {
+  form {
+    grid-template-areas:
+      "name "
+      "email"
+      "tel"
+      "num"
+      "msg"
+      "btn";
+  }
+}
